@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Python 웹프로젝트 v1</title>
+    <link rel="stylesheet" href="{% static '/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static '/css/webproject.css' %}">
+    <style>
+        /* 로그인한 회원의 정보 테이블 배치 */
+        table { /*border: 1px solid red;*/ margin: 120px auto }
+
+        /* 회원 정보 각 행에 여백 주기 */
+        th, td { padding: 10px}
+
+        /* 회원정보 테이블의 제목 정렬하기 */
+        th { text-align: right}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>Python 웹프로젝트 v1</h1>
+            <nav>
+                <ul id="navi">
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/join">회원가입</a></li>
+                    <li><a href="/login">로그인</a></li>
+                    <li><a href="/list">게시판</a></li>
+                    <li><a href="/myinfo">회원정보</a></li>
+                </ul>
+            </nav>
+            <hr>
+        </header>
+        <div id="main">
+            <h2>회원정보</h2>
+            <table>
+                <tr>
+                    <th>아이디</th>
+                    <td>siestageek</td>
+                </tr>
+                <tr>
+                    <th>이름</th>
+                    <td>으하하하</td>
+                </tr>
+                <tr>
+                    <th>이메일</th>
+                    <td>zzyzigy@naver.com</td>
+                </tr>
+                <tr>
+                    <th>가입일</th>
+                    <td>2022-05-27 12:17:10</td>
+                </tr>
+
+            </table>
+        </div>
+        <footer>
+            <hr>
+            <span>
+                copyright &copy; 2022. sephyrot. All Rights Reserved
+            </span>
+        </footer>
+    </div>
+</body>
+</html>
