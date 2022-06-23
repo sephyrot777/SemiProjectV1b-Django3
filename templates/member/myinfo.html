@@ -14,23 +14,34 @@
 {% endblock %}
 
 {% block content %}
+
+    {# 만약 로그인을 안했다면 #}
+    {# 회원정보 페이지는 보여지면 안됨 #}
+
+    {% if not request.session.userid %}
+        <script>
+            alert('회원전용 페이지 입니다!!')
+            location.href = '/login';
+        </script>
+    {% endif %}
+
     <h2>회원정보</h2>
     <table>
         <tr>
             <th>아이디</th>
-            <td>siestageek</td>
+            <td>{{ member.userid }}</td>
         </tr>
         <tr>
             <th>이름</th>
-            <td>으하하하</td>
+            <td>{{ member.name }}</td>
         </tr>
         <tr>
             <th>이메일</th>
-            <td>zzyzigy@naver.com</td>
+            <td>{{ member.email }}</td>
         </tr>
         <tr>
             <th>가입일</th>
-            <td>2022-05-27 12:17:10</td>
+            <td>{{ member.regdate }}</td>
         </tr>
     </table>
 {% endblock %}
