@@ -23,7 +23,7 @@
 
         <div>
             <label for="name">작성자</label>
-            <span id="name">abc123</span>
+            <span id="name">{{ request.session.userid }}</span>
         </div>
 
         <div>
@@ -38,7 +38,7 @@
             <button type="reset">다시입력</button>
         </div>
 
-        <input type="hidden" name="userid" value="abc123">
+        <input type="hidden" name="memberid" value="{{ request.session.userid_id }}">
     </form>
 {% endblock %}
 
